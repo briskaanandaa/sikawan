@@ -3,6 +3,21 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/wc/:path*",
+      "destination": "https://sikawan-pagersari.id/wp-json/wc/v3/:path*"
+    },
+    {
+      "source": "/api/wp/:path*",
+      "destination": "https://sikawan-pagersari.id/wp-json/wp/v2/:path*"
+    },
+    {
+      "source": "/api/sikawan/:path*",
+      "destination": "https://sikawan-pagersari.id/wp-json/sikawan/v1/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }

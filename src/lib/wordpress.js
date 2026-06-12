@@ -4,7 +4,7 @@ import axios from "axios";
    WORDPRESS CLIENT
 ============================= */
 const wp = axios.create({
-  baseURL: `${import.meta.env.VITE_WC_API_URL.replace("/wc/v3", "")}/wp/v2`,
+  baseURL: import.meta.env.VITE_WP_BASE_URL ?? "/api/wp",
   auth: {
     username: import.meta.env.VITE_WP_USERNAME,
     password: import.meta.env.VITE_WP_APP_PASSWORD,
@@ -149,7 +149,7 @@ export const uploadPostMedia = async (file) => {
   formData.append("file", file);
 
   const res = await axios.post(
-    `${import.meta.env.VITE_WC_API_URL.replace("/wc/v3", "")}/wp/v2/media`,
+    `${import.meta.env.VITE_WP_BASE_URL ?? "/api/wp"}/media`,
     formData,
     {
       auth: {

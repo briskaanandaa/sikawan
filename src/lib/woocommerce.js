@@ -4,7 +4,7 @@ import axios from "axios";
    WOOCOMMERCE CLIENT
 ============================= */
 export const wc = axios.create({
-  baseURL: import.meta.env.VITE_WC_API_URL,
+  baseURL: import.meta.env.VITE_WC_API_URL ?? "/api/wc",
   auth: {
     username: import.meta.env.VITE_WC_CONSUMER_KEY,
     password: import.meta.env.VITE_WC_CONSUMER_SECRET,
@@ -146,7 +146,7 @@ export const uploadMedia = async (file) => {
   formData.append("file", file);
 
   const res = await axios.post(
-    `${import.meta.env.VITE_WC_API_URL.replace("/wc/v3", "")}/wp/v2/media`,
+    `${import.meta.env.VITE_WP_BASE_URL ?? "/api/wp"}/media`,
     formData,
     {
       auth: {
