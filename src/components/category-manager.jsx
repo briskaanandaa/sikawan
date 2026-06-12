@@ -24,7 +24,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { cn } from "@/lib/utils";
-import { useProductCategories } from "@/hooks/useKatalogCategory";
+import { useProductCategories } from "@/hooks/useKatalogcategory";
 
 /**
  * @param {number[]} selected  - id kategori yang di-assign ke produk
