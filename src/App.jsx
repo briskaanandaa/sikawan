@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/contexts/AuthContext";
-import ProtectedRoute from "@/components/ProtectedRoute";
+import ProtectedRoute from "@/components/protectedroute"
 
 // Pages
 import LoginPage from "@/pages/login/page";
@@ -19,6 +19,7 @@ import SettingsPage from "@/pages/settings/page";
 import Layout from "@/components/layout";
 
 export default function App() {
+
   return (
     <BrowserRouter>
       <AuthProvider>
