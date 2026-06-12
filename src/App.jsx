@@ -19,6 +19,10 @@ import SettingsPage from "@/pages/settings/page";
 import Layout from "@/components/layout";
 
 export default function App() {
+
+   console.log('WC KEY:', import.meta.env.VITE_WC_CONSUMER_KEY)
+  console.log('WC SECRET:', import.meta.env.VITE_WC_CONSUMER_SECRET)
+  
   return (
     <BrowserRouter>
       <AuthProvider>
