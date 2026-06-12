@@ -3,7 +3,6 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
-<<<<<<< HEAD
     {
       "source": "/api/wc/:path*",
       "destination": "https://sikawan-pagersari.id/wp-json/wc/v3/:path*"
@@ -22,8 +21,3 @@
     }
   ]
 }
-=======
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
->>>>>>> 2ed5313feb424626b2b32a607a9e55ebe410b2c7
